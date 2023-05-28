@@ -31,11 +31,10 @@ node {
         sh 'npm run build'
         sh 'pwd'
         try {
-          sh 'rm -rf ../../fe-build'
+          sh 'rm -rf ../../fe-build/*'
         } catch (Exception e) {
           echo "Folder does not exist on the first run! It should be good!"
-        }
-        sh 'mkdir ../../fe-build'
+        }   
         sh 'cp -r ./build/* ../../fe-build'
     }
   }
