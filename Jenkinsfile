@@ -29,10 +29,13 @@ node {
         // sh 'node -v'
         sh 'npm install'
         sh 'npm run build'
-        sh 'rm -rf ../../fe-build'
+        try {
+          sh 'rm -rf ../../fe-build'
+        } catch (Exception e) {
+          echo "Folder does not exist on the first run! It should be good!"
+        }
         sh 'mkdir ../../fe-build'
         sh 'cp -r ./build/* ../../fe-build'
-    //   }
     }
   }
   catch (err) {
