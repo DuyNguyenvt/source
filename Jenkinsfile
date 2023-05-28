@@ -27,6 +27,7 @@ node {
         // sh 'docker rmi -f react-app localhost:5000/react-app'
         sh 'pwd'
         // sh 'node -v'
+        sh 'npm install'
         sh 'npm run build'
     //   }
     }
