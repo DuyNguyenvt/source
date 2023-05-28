@@ -29,6 +29,7 @@ node {
         // sh 'node -v'
         sh 'npm install'
         sh 'npm run build'
+        sh 'pwd'
         try {
           sh 'rm -rf ../../fe-build'
         } catch (Exception e) {
