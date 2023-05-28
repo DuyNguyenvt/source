@@ -29,6 +29,9 @@ node {
         // sh 'node -v'
         sh 'npm install'
         sh 'npm run build'
+        sh 'rm -rf ../../fe-build'
+        sh 'mkdir ../../fe-build'
+        sh 'cp -r ./build/* ../../fe-build'
     //   }
     }
   }
