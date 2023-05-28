@@ -6,6 +6,7 @@ node {
     stage('Environment') {
       sh 'git --version'
       echo "Branch: ${env.BRANCH_NAME}"
+      sh 'node -v'
     //   sh 'docker -v'
     //   sh 'printenv'
     }
@@ -24,6 +25,8 @@ node {
         // sh 'docker tag react-app localhost:5000/react-app'
         // sh 'docker push localhost:5000/react-app'
         // sh 'docker rmi -f react-app localhost:5000/react-app'
+        sh 'pwd'
+        // sh 'node -v'
         sh 'npm run build'
     //   }
     }
